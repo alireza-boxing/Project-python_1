@@ -1,8 +1,7 @@
-# Project-python_1
-
 
 while True:
 
+    print("\n===== Shape Menu =====")
     print("1. Square")
     print("2. Triangle")
     print("3. Reverse Triangle")
@@ -15,7 +14,7 @@ while True:
     if choice == 1:
         for raw in range(5):
             for col in range(5):
-                if True:
+                if raw >= 0:
                     print("*", end=" ")
                 else:
                     print(" ", end=" ")
@@ -40,10 +39,9 @@ while True:
             print()
 
     elif choice == 4:
-        for raw in range(5):
-            for col in range(5):
-                if (raw + col >= 2 and raw + col <= 6
-                    and raw - col <= 2 and col - raw <= 2):
+        for raw in range(9):
+            for col in range(9):
+                if abs(raw - 4) + abs(col - 4) <= 4:
                     print("*", end=" ")
                 else:
                     print(" ", end=" ")
@@ -66,4 +64,4 @@ while True:
         break
 
     else:
-        print("Wrong number!")
+        print("Wrong number! Try again.")
